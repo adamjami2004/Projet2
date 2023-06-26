@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/adamjami2004/Projet2/static/css/main.073c9b0a.css",
+    "main.js": "/adamjami2004/Projet2/static/js/main.d43ceaaa.js",
+    "static/js/787.27fb6eb7.chunk.js": "/adamjami2004/Projet2/static/js/787.27fb6eb7.chunk.js",
+    "static/media/logo.svg": "/adamjami2004/Projet2/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/adamjami2004/Projet2/index.html",
+    "main.073c9b0a.css.map": "/adamjami2004/Projet2/static/css/main.073c9b0a.css.map",
+    "main.d43ceaaa.js.map": "/adamjami2004/Projet2/static/js/main.d43ceaaa.js.map",
+    "787.27fb6eb7.chunk.js.map": "/adamjami2004/Projet2/static/js/787.27fb6eb7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.d43ceaaa.js"
+  ]
+}
