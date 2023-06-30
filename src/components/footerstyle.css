@@ -1,0 +1,22 @@
+.footer {
+    background-color: #3B312F;
+    color: white;
+    height: 90px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer h4 {
+    font-size: 18px;
+    margin-right: 0;
+  }
+  
+  
+  
+ 
+
+  
+.text-right{
+    color: aliceblue;
+    margin-left: 0;
+}

@@ -1,0 +1,16 @@
+#botp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-right: 70px;
+}
+
+#su{
+  padding-right: 15%;
+  padding-left: 5%;
+
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}

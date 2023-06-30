@@ -1,24 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar1 from './components/Navbar'
+import Home from './components/Home'
+import About from './components/about';
+import Bot from './components/bot';
+import Booking from './components/booking';
+import Destinations from './components/destinations';
+import { Routes, Route  } from 'react-router-dom';
+
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  const imageUrl = 'https://wallpapercave.com/w/wp6686021.jpg';
+  
+
+  return ( 
+    <div>
+
+      <Navbar1/>
+      <Routes>
+        <Route path="/" element={<Home imageUrl={imageUrl}/>} />
+        <Route path="/bot" element={<Bot/>} />
+        <Route path="/about" element={<About/>} />
+        <Route path="/pricing" element={<About/>} />
+        <Route path="/destination" element={<Destinations/>} />
+        <Route path="/booking" element={<Booking/>} />
+      </Routes>
+      
+
+
     </div>
+
+    
   );
 }
 

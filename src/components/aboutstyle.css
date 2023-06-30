@@ -1,0 +1,51 @@
+.card-grid {
+    background-color: white;
+    height: 100vh;
+  }
+  
+  .card {
+    height: 100%;
+    background-color: #3B312F;
+  }
+
+  .card-body{
+    color: white;
+    text-align: center;
+  }
+  
+  .card-title {
+    text-align: center;
+  }
+
+  h1{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: -70px;
+  }
+
+  #photo{
+    margin-right: 20px;
+  }
+
+  #photo2{
+    max-height: 400px;
+  }
+  h2{
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: -60px;
+  }
+
+  #photo3{
+    margin-left: 20px;
+  }
+  
+
+
+  
+  
+  
+  
+  
+  
+  

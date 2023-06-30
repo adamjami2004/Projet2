@@ -1,0 +1,35 @@
+.navbar-collapse {
+    justify-content: flex-end;
+    padding-right: 5%;
+}
+
+.navbar{}
+
+.custom-navbar {
+    height: 80px; 
+    width: 100hv;
+    
+}
+
+#liste{
+    
+    font-size: large;
+    font-weight: 500;
+    padding-left: 20px;
+    color: white;
+    display: flex;
+    
+}
+
+
+
+#logo{
+    padding-left: 20px;
+}
+
+#book{
+    
+    font-size: large;
+    margin-left: 20px;
+}
+  

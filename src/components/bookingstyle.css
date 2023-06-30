@@ -1,0 +1,46 @@
+/* Add this CSS code to your existing CSS file or create a new one */
+
+.w-75 {
+    /* Other styles for the container */
+    text-align: center; /* Center align the content horizontally */
+  }
+  
+  button {
+    margin-top: 20px; /* Add some space between the form and the button */
+  }
+
+  input[type="text"] {
+    width: 200px; /* Adjust the width as desired */
+    margin: 0 auto; /* Center align the input horizontally */
+  }
+
+  #progression{
+    margin-top: 20px;
+  }
+
+
+  #previous{
+    margin-right: 20px;
+  }
+
+  #alert{
+    margin-top: 30px;
+  }
+
+  .form-control.custom-height {
+    width: 200px; /* Adjust the value as needed */
+  }
+
+  #number{
+    width: 200px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+
+  #mer{
+    margin-top: 30px;
+
+  }
+  #next{
+    margin-bottom: 20px;
+  }
