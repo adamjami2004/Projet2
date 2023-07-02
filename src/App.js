@@ -19,6 +19,7 @@ function App() {
       <Navbar1/>
       <Routes>
         <Route path="/" element={<Home imageUrl={imageUrl}/>} />
+        <Route path="/home" element={<Home imageUrl={imageUrl}/>} />
         <Route path="/bot" element={<Bot/>} />
         <Route path="/about" element={<About/>} />
         <Route path="/pricing" element={<Price/>} />

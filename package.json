@@ -1,7 +1,7 @@
 {
   "name": "reactfirst",
   "version": "0.1.0",
-  "homepage": "https://github.com/adamjami2004/Projet2",
+  "homepage": "https://adamjami2004.github.io/Projet2/",
   "private": true,
   "dependencies": {
     "@date-io/date-fns": "^2.16.0",
