@@ -10,6 +10,16 @@ export const Base = [
       img: "https://wallpapercave.com/w/wp5229572.jpg",  
     },
     {
+        id: "11",
+        region:"Europe",
+        country: "France",
+        city: "Marseille",
+        starts: "5",
+        hotel:"La Chapelle",
+        price:"300 $",
+        img: "https://wallpapercave.com/w/wp10535401.jpg",  
+    },
+    {
         id: "2",
         region:"North africa",
         country: "Morocco",
@@ -97,8 +107,39 @@ export const Base = [
         starts: "4",
         hotel:"Le Lavoisier",
         price:"150 $",
-        img: "https://wallpapercave.com/w/wp12082228.jpg",  
+        img: "https://wallpapercave.com/w/wp10535399.jpg",  
     },
     
+    {
+        id: "12",
+        region:"Europe",
+        country: "France",
+        city: "Nancy",
+        starts: "4",
+        hotel:"Le Capitole",
+        price:"245 $",
+        img: "https://wallpapercave.com/w/wp10535406.jpg",  
+    },
+    {
+        id: "13",
+        region:"Europe",
+        country: "Italy",
+        city: "Venise",
+        starts: "5",
+        hotel:"El Bonnuci",
+        price:"285 $",
+        img: "https://wallpapercave.com/w/wp8725790.jpg",  
+    },
+    {
+        id: "14",
+        region:"Europe",
+        country: "Italy",
+        city: "Torino",
+        starts: "5",
+        hotel:"Frederico Chiesa",
+        price:"300 $",
+        img: "https://wallpapercave.com/w/wp10535412.jpg",  
+    },
+
 
 ];

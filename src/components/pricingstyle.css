@@ -1,0 +1,15 @@
+#calcul{
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+}
+
+#ecr{
+    margin-bottom: 120px;
+}
+
+#warning{
+    align-items: center;
+    text-align: center;
+    font-size: large;
+}

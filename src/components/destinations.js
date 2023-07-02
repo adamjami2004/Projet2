@@ -8,6 +8,7 @@ import Col from 'react-bootstrap/esm/Col';
 import Facets_container from './Facets_container';
 import Choix from './dest';
 import { Base } from "./data";
+import Help from "./top";
 
 function Destinations() {
     const build_categorical_facet_values = (name) => {
@@ -93,6 +94,7 @@ function Destinations() {
           </Container>
         </Col>
       </Row>
+      <Help/>
     </div>
   );
 }

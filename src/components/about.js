@@ -7,6 +7,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Footer from './footer';
 import Help from './top';
+import { Link } from 'react-router-dom';
 function About() {
 
   const redirectToVideoAsia = () => {
@@ -110,7 +111,8 @@ function About() {
                   <br />
                   The pricing policy may change from a destination to another. You can check and estimate the cost of your trip with our new fee simulator.
                   <br />
-                  <Button id="book" variant="success">Estimate</Button>
+                  <br />
+                  <Button id="book" as={Link} to="/pricing" variant="success">Estimate</Button>
                 </Card.Text>
               </Card.Body>
             </Card>

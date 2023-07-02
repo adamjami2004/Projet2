@@ -6,7 +6,7 @@ import Bot from './components/bot';
 import Booking from './components/booking';
 import Destinations from './components/destinations';
 import { Routes, Route  } from 'react-router-dom';
-
+import Price from './components/pricing';
 
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
         <Route path="/" element={<Home imageUrl={imageUrl}/>} />
         <Route path="/bot" element={<Bot/>} />
         <Route path="/about" element={<About/>} />
-        <Route path="/pricing" element={<About/>} />
+        <Route path="/pricing" element={<Price/>} />
         <Route path="/destination" element={<Destinations/>} />
         <Route path="/booking" element={<Booking/>} />
       </Routes>

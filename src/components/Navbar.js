@@ -19,7 +19,7 @@ function Navbar1() {
           <Nav.Link as={Link} to="/">Home</Nav.Link>
           <Nav.Link as={Link} to="/about">About us</Nav.Link>
           <Nav.Link as={Link} to="/destination">Our destinations</Nav.Link>
-          <Nav.Link href="#contact">Pricing</Nav.Link>
+          <Nav.Link as={Link} to="/pricing">Pricing</Nav.Link>
           <Nav.Link as={Link} to="/bot">Help</Nav.Link>
           <Button id="book" as={Link} to="/booking" variant="outline-success">Book now</Button>
         </Nav>

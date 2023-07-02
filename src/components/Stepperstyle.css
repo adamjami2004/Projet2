@@ -1,0 +1,23 @@
+#bar{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+#step{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#confirmation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#bouton{
+    margin-left: 10px;
+}
+  
