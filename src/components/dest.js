@@ -7,7 +7,7 @@ import Container from 'react-bootstrap/esm/Container';
 import { Link } from 'react-router-dom';
 import "./deststyle.css"
 
-function Choix({ region, price, country, city, starts, id , hotel, img, }) {
+function Choix({ region, price, country, city, stars, id , hotel, img, }) {
     return (
         <Card id= "carte" className='m-2' style={{ width: '18rem' }}>
             <Card.Img variant="top" src={img} />
@@ -28,7 +28,7 @@ function Choix({ region, price, country, city, starts, id , hotel, img, }) {
                     </Row>
                     <Row>
                         <Col>Stars:</Col>
-                        <Col>{starts}</Col>
+                        <Col>{stars}</Col>
                     </Row>
                     <Row>
                         <Col>Price/night:</Col>

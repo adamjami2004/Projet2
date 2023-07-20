@@ -3,6 +3,9 @@
     padding-right: 5%;
 }
 
+#switch{
+    margin-left: 20px;
+}
 
 .custom-navbar {
     height: 80px; 

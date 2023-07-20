@@ -16,8 +16,15 @@
     align-items: center;
 }
 
+#al{
+    margin-top: 10px;
+    position: 'absolute';
+    opacity: 0.8;
+    transition: 'opacity 0.5s ease-in-out';
+}
+
 
 #bouton{
-    margin-left: 10px;
+    margin-right: 10px;
 }
   

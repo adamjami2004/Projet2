@@ -11,14 +11,118 @@ import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 import './Stepperstyle.css';
 import Alert from 'react-bootstrap/Alert';
+import { Row } from 'react-bootstrap';
+
 const steps = ['Basic Info', 'Dates', 'Destination', 'Payment Info', 'Confirmation'];
 
 export default function HorizontalLinearStepper() {
   const [activeStep, setActiveStep] = React.useState(0);
   const [skipped, setSkipped] = React.useState(new Set());
   const [checked, setChecked] = React.useState(false);
+  const [errorAlert, setErrorAlert] = React.useState(false);
+  const term = () => {
+    window.location.href = 'https://termly.io/resources/templates/terms-and-conditions-template/';
+  };
+  
+
+  const [formData, setFormData] = React.useState([
+    {
+      firstName: '',
+      lastName: '',
+      email: '',
+      phoneNumber: '',
+    },
+    {
+      startDate: '',
+      endDate: '',
+      citizenship: '',
+      cityOfDeparture: '',
+    },
+    {
+      numberOfNights: '',
+      numberOfPeople: '',
+      hotelName: '',
+    },
+    {
+      cardNumber: '',
+      expirationDate: '',
+      nameOnCard: '',
+      ccv: '',
+    },
+    {
+      
+    },
+  ]);
+
+  
+
+  const validateCurrentStep = () => {
+    switch (activeStep) {
+      case 0: // Basic Info Step Validation
+        if (
+          formData[0].firstName.trim() === '' ||
+          formData[0].lastName.trim() === '' ||
+          formData[0].email.trim() === '' ||
+          formData[0].phoneNumber.trim() === ''
+        ) {
+          setErrorAlert(true);
+          return false;
+        }
+        break;
+      case 1: // Dates Step Validation
+        if (
+          formData[1].startDate.trim() === '' ||
+          formData[1].endDate.trim() === '' ||
+          formData[1].citizenship.trim() === '' ||
+          formData[1].cityOfDeparture.trim() === ''
+        ) {
+          setErrorAlert(true);
+          return false;
+        }
+        break;
+      case 2: // Destination Step Validation
+        if (
+          formData[2].numberOfNights.trim() === '' ||
+          formData[2].numberOfPeople.trim() === '' ||
+          formData[2].hotelName.trim() === ''
+        ) {
+          setErrorAlert(true);
+          return false;
+        }
+        break;
+      case 3: // Payment Info Step Validation
+        if (
+          formData[3].cardNumber.trim() === '' ||
+          formData[3].expirationDate.trim() === '' ||
+          formData[3].nameOnCard.trim() === '' ||
+          formData[3].ccv.trim() === ''
+        ) {
+          setErrorAlert(true);
+          return false;
+        }
+        break;
+      case 4: // Confirmation Step Validation
+        // Add validation logic for the fields in the Confirmation step
+        // Add any additional validation for the Confirmation step here if needed
+        break;
+      default:
+        return true; // For other steps, no validation required, so return true.
+    }
+
+    setErrorAlert(false); // Reset the error state if no validation errors were found
+    return true;
+  };
 
   const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prevFormData) => {
+      const updatedFormData = [...prevFormData];
+      updatedFormData[activeStep] = {
+        ...updatedFormData[activeStep],
+        [name]: value,
+      };
+      return updatedFormData;
+    });
     setChecked(event.target.checked);
   };
 
@@ -31,6 +135,11 @@ export default function HorizontalLinearStepper() {
   };
 
   const handleNext = () => {
+    const isCurrentStepValid = validateCurrentStep();
+    if (!isCurrentStepValid) {
+      return; // Prevent moving to the next step if the current step is not valid
+    }
+
     let newSkipped = skipped;
     if (isStepSkipped(activeStep)) {
       newSkipped = new Set(newSkipped.values());
@@ -47,6 +156,35 @@ export default function HorizontalLinearStepper() {
 
   const handleReset = () => {
     setActiveStep(0);
+    setFormData([
+      {
+        firstName: '',
+        lastName: '',
+        email: '',
+        phoneNumber: '',
+      },
+      {
+        startDate: '',
+        endDate: '',
+        citizenship: '',
+        cityOfDeparture: '',
+      },
+      {
+        numberOfNights: '',
+        numberOfPeople: '',
+        hotelName: '',
+      },
+      {
+        cardNumber: '',
+        expirationDate: '',
+        nameOnCard: '',
+        ccv: '',
+      },
+      {
+        // Additional data for Confirmation step if needed
+      },
+    ]);
+    setErrorAlert(false);
   };
 
   return (
@@ -71,8 +209,9 @@ export default function HorizontalLinearStepper() {
       {activeStep === steps.length ? (
         <React.Fragment>
           <Typography id="confirmation" sx={{ mt: 2, mb: 1 }}>
-            The Booking has been completed! You'll receive an email confirmation soon.
-
+            <Alert variant={'primary'}>
+              Your confirmation has been completed! You will receive an email confirmation soon.
+            </Alert>
           </Typography>
           <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
             <Box sx={{ flex: '1 1 auto' }} />
@@ -96,67 +235,149 @@ export default function HorizontalLinearStepper() {
           >
             {activeStep === 0 && (
               <React.Fragment>
-                <TextField label="First Name" />
+                <TextField
+                  label="First Name"
+                  name="firstName"
+                  value={formData[0].firstName}
+                  onChange={handleChange}
+                />
                 <br />
-                <TextField label="Last Name" />
+                <TextField
+                  label="Last Name"
+                  name="lastName"
+                  value={formData[0].lastName}
+                  onChange={handleChange}
+                />
                 <br />
-                <TextField label="Email" />
+                <TextField
+                  label="Email"
+                  name="email"
+                  value={formData[0].email}
+                  onChange={handleChange}
+                />
                 <br />
-                <TextField label="Phone Number" />
+                <TextField
+                  label="Phone Number"
+                  name="phoneNumber"
+                  value={formData[0].phoneNumber}
+                  onChange={handleChange}
+                />
               </React.Fragment>
             )}
             {activeStep === 1 && (
               <React.Fragment>
-                <TextField label="Start Date" />
+                <TextField
+                  label="Start Date (YYYY/MM/DD)"
+                  name="startDate"
+                  value={formData[1].startDate}
+                  onChange={handleChange}
+                />
                 <br />
-                <TextField label="End Date" />
+                <TextField
+                  label="End Date (YYYY/MM/DD)"
+                  name="endDate"
+                  value={formData[1].endDate}
+                  onChange={handleChange}
+                />
                 <br />
-                <TextField label="Citizenship" />
+                <TextField
+                  label="Citizenship"
+                  name="citizenship"
+                  value={formData[1].citizenship}
+                  onChange={handleChange}
+                />
                 <br />
-                <TextField label="City of Departure" />
+                <TextField
+                  label="City of Departure"
+                  name="cityOfDeparture"
+                  value={formData[1].cityOfDeparture}
+                  onChange={handleChange}
+                />
               </React.Fragment>
             )}
             {activeStep === 2 && (
               <React.Fragment>
-                <TextField label="Number of Nights" />
+                <TextField
+                  label="Number of Nights"
+                  name="numberOfNights"
+                  value={formData[2].numberOfNights}
+                  onChange={handleChange}
+                />
                 <br />
-                <TextField label="Number of people" />
+                <TextField
+                  label="Number of people"
+                  name="numberOfPeople"
+                  value={formData[2].numberOfPeople}
+                  onChange={handleChange}
+                />
                 <br />
-                <TextField label="Hotel Name" />
+                <TextField
+                  label="Hotel Name"
+                  name="hotelName"
+                  value={formData[2].hotelName}
+                  onChange={handleChange}
+                />
                 <br />
-                <Button as={Link} to="/destination" variant="primary">
+                <Button as={Link} to="/destination" variant="outline-primary">
                   Our destinations
                 </Button>
               </React.Fragment>
             )}
             {activeStep === 3 && (
               <React.Fragment>
-                <TextField label="Card Number" />
+                <TextField
+                  label="Card Number"
+                  name="cardNumber"
+                  value={formData[3].cardNumber}
+                  onChange={handleChange}
+                />
                 <br />
-                <TextField label="Expiration Date" />
+                <TextField
+                  label="Expiration Date"
+                  name="expirationDate"
+                  value={formData[3].expirationDate}
+                  onChange={handleChange}
+                />
                 <br />
-                <TextField label="Name on the card" />
+                <TextField
+                  label="Name on the card"
+                  name="nameOnCard"
+                  value={formData[3].nameOnCard}
+                  onChange={handleChange}
+                />
                 <br />
-                <TextField label="CCV" />
+                <TextField
+                  label="CCV"
+                  name="ccv"
+                  value={formData[3].ccv}
+                  onChange={handleChange}
+                />
               </React.Fragment>
             )}
             {activeStep === 4 && (
               <React.Fragment>
+                <Button variant='outline-primary' >Terms and conditions</Button>
                 <FormControlLabel
                   control={<Checkbox checked={checked} onChange={handleChange} />}
-                  label="I've read and blablabla all the terms and conditions."
+                  label="I've read all the terms and conditions."
                 />
               </React.Fragment>
             )}
+            {errorAlert && (
+              <Alert id="al"variant="danger" onClose={() => setErrorAlert(false)} dismissible>
+                OOPS! You forgot to fill a field.
+              </Alert>
+            )}
           </Box>
-          <Box sx={{ display: 'flex', justifyContent: 'center', pt: 2 }}>
-            <Button  id="bouton" color="inherit" disabled={activeStep === 0} onClick={handleBack} sx={{ ml: 3 }}>
+          <Box sx={{ display: 'flex', justifyContent: 'center', pt: 2,}}>
+            <Button id="bouton" color="inherit" disabled={activeStep === 0} onClick={handleBack} sx={{ mr: 3 }}>
               Back
             </Button>
-            <Button onClick={handleNext} sx={{ mr:3 }}>
+            <Button onClick={handleNext} sx={{ ml: 3 }}>
               {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
             </Button>
           </Box>
+          
         </React.Fragment>
       )}
     </Box>

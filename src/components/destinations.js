@@ -22,7 +22,7 @@ function Destinations() {
     facets: {
       region: build_categorical_facet_values('region'),
       country: build_categorical_facet_values('country'),
-      starts: build_categorical_facet_values('starts')
+      stars: build_categorical_facet_values('stars')
     }
   });
 
@@ -79,7 +79,7 @@ function Destinations() {
 
   return (
     <div>
-        <h1 id="titre">Our selection</h1>
+        <h1 id="titre">Our destinations</h1>
       <Row>
         <Col className='border-end' md={3}>
           <Facets_container facets={state.facets} updateCategory={updateCategory} clearAllFacetValues={clearAllFacetValues} />

@@ -1,0 +1,32 @@
+{
+    "translation":{
+        "home":"Home",
+        "destinations":"Nos destinations",
+        "about":"A propos",
+        "price":"Prix",
+        "help":"Aide",
+        "book":"Réservez",
+        "lang":"FR",
+        "titre":"Voyagez commme jamais auparavant",
+        "title":"Découvrez toutes les possibilités",
+        "eu":"Europe",
+        "asia":"Asie du Sud",
+        "na":"Afrique du Nord",
+        "vid":"Voir plus",
+        "a":"En apprendre plus",
+        "b":"Simulateur de prix",
+        "c":"Choisir une option",
+        "d":"Nombre de nuits",
+        "e":"Nombre de personne(s)",
+        "f":"Type d'hotel",
+        "g":"Estimer",
+        "h":"L'estimation du prix de votre voyage est: ",
+        "i":"3 étoiles",
+        "j":"4 étoiles",
+        "k":"5 étoiles"
+
+
+        }
+
+    
+}

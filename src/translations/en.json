@@ -1,0 +1,32 @@
+{
+    "translation":{
+        "home":"Home",
+        "destinations":"Our destinations",
+        "about":"About us",
+        "price":"Pricing",
+        "help":"Help",
+        "book":"Book now",
+        "lang":"EN",
+        "titre":"Travel like you never did before",
+        "title":"Discover all the possibilities",
+        "eu":"Europe",
+        "asia":"South Asia",
+        "na":"North Africa",
+        "vid":"See More",
+        "a":"Learn More",
+        "b":"Price Simulator",
+        "c":"Choose an option",
+        "d":"Number of nights",
+        "e":"Number of people",
+        "f":"Hotel Type",
+        "g":"Estimate",
+        "h":"The estimated price for your trip is: ",
+        "i":"3 stars",
+        "j":"4 stars",
+        "k":"5 stars"
+
+
+        
+
+    }
+}

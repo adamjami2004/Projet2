@@ -24,7 +24,10 @@
   }
 
   #photo{
-    margin-right: 20px;
+    margin-right: 10%;
+  }
+  #photo3{
+    margin-right: 10%;
   }
 
   #photo2{
@@ -34,6 +37,7 @@
     text-align: center;
     margin-top: 60px;
     margin-bottom: -60px;
+    font-family: 'Times New Roman', Times, serif;
   }
 
   #photo3{

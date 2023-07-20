@@ -7,10 +7,14 @@ import Booking from './components/booking';
 import Destinations from './components/destinations';
 import { Routes, Route  } from 'react-router-dom';
 import Price from './components/pricing';
-
+import { useTranslation} from 'react-i18next';
 
 function App() {
   const imageUrl = 'https://wallpapercave.com/w/wp6686021.jpg';
+
+  const { t, i18n } = useTranslation();
+
+  
   
 
   return ( 

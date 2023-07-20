@@ -15,7 +15,7 @@ function Bot(){
         },
         {
             id:'Ask Name',
-            message:'Please enter your name',
+            message:'How should I call you?',
             trigger:'Waiting1'
         },
         {
@@ -69,7 +69,7 @@ function Bot(){
           },
           {
             id: 'No',
-            message: 'Sorry to hear that, your feedback is important and we will do our best to make your next experience better',
+            message: 'Sorry to hear that. Your feedback is important and we will do our best to make your next experience better',
             trigger: 'end'
           },
           {
@@ -79,7 +79,7 @@ function Bot(){
           },
           {
             id: 'end',
-            message: 'Chatbot session has ended',
+            message: 'Chatbot session has ended. GoodBye',
             end: true
           }
         

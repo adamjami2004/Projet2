@@ -8,7 +8,20 @@ import Col from 'react-bootstrap/Col';
 import Footer from './footer';
 import Help from './top';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 function About() {
+  const { t, i18n } = useTranslation();
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
+
+  const swapLanguage = () => {
+    if (i18n.language === 'en') {
+      changeLanguage('fr');
+    } else {
+      changeLanguage('en');
+    }
+  };
 
   const redirectToVideoAsia = () => {
     window.location.href = 'https://www.youtube.com/watch?v=xQ_3aW0Hn5w';
@@ -27,16 +40,16 @@ function About() {
 
   return (
     <div style={{ backgroundColor: 'white', height: '100vh' }}>
-          <h2>Discover all the possibilities!</h2>
+          <h2>{t('title')}</h2>
       <Container className="d-flex align-items-center justify-content-center h-100" id="destinations">
         <Row>
           <Col>
             <Card className="flex-fill">
             <Card.Img variant="top" src="https://wallpapercave.com/w/wp12048362.jpg" />
               <Card.Body>
-                <Card.Title> Europe</Card.Title>
-                <Card.Text>This is the content of Card 1.</Card.Text>
-                <Button onClick={redirectToVideoeu} id="video_europe"variant="outline-danger">Take a look</Button>
+                <Card.Title> {t('eu')}</Card.Title>
+                <Card.Text>Get to know the old continent better</Card.Text>
+                <Button onClick={redirectToVideoeu} id="video_europe"variant="outline-danger">{t('vid')}</Button>
               </Card.Body>
             </Card>
           </Col>
@@ -44,9 +57,9 @@ function About() {
             <Card className="flex-fill">
             <Card.Img variant="top" src="https://wallpapercave.com/w/wp5229572.jpg" />
               <Card.Body>
-                <Card.Title> North Africa</Card.Title>
-                <Card.Text>This is the content of Card 2.</Card.Text>
-                <Button  onClick={redirectToVideoAf}   id="video_africa"variant="outline-danger">Take a look</Button>
+                <Card.Title> {t('na')}</Card.Title>
+                <Card.Text>Learn about beautiful cultures</Card.Text>
+                <Button  onClick={redirectToVideoAf}   id="video_africa"variant="outline-danger">{t('vid')}</Button>
               </Card.Body>
             </Card>
           </Col>
@@ -54,42 +67,42 @@ function About() {
             <Card className="flex-fill">
             <Card.Img variant="top" src="https://wallpapercave.com/w/wp12040446.jpg" />
               <Card.Body>
-                <Card.Title> South Asia</Card.Title>
-                <Card.Text>This is the content of Card 3.</Card.Text>
-                <Button  onClick={redirectToVideoAsia} id="video_asia"variant="outline-danger">Take a look</Button>
+                <Card.Title> {t('asia')}</Card.Title>
+                <Card.Text>Discover the nature in a new way</Card.Text>
+                <Button  onClick={redirectToVideoAsia} id="video_asia"variant="outline-danger">{t('vid')}</Button>
               </Card.Body>
             </Card>
           </Col>
         </Row>    
       </Container>
 
-      <Container className="d-flex align-items-center justify-content-center h-100">
+      <Container className="d-flex align-items-center justify-content-center ">
       <Col>
             <Card className="flex-fill" id="photo">
-            <Card.Img variant="top" id="photo2" src="https://wallpapercave.com/w/wp12399217.jpg" />
+              <Card.Img variant="top" id="photo2" src="https://wallpapercave.com/w/wp12399217.jpg" />
               <Card.Body>
-                <Card.Title> Discover new destinations</Card.Title>
-                
+                <Card.Title> Discover new destinations</Card.Title>  
               </Card.Body>
             </Card>
           </Col>
           <Col>
-            <Card className="flex-fill">
+            <Card className="flex-fill" >
             
               <Card.Body>
-                <Card.Title>Get to know new cultures</Card.Title>
-                <Card.Text>We do offer pre-organized trips that contain:
+                <Card.Title>Stay Stress-Free</Card.Title>
+                <Card.Text>We do offer pre-organized trips that include:
                   <br />
-                  <br />
-                  -Accomodation
-                  <br />
-                  -Plane trip
+                  -All the types of activities you'll need to enjoy your trip
                   <br />
                   -Transport from the airport to the hotel
                   <br />
                   -Visa application fees (if applicable)
                   <br />
-                  -All the types of activities you'll need to do to enjoy your trip
+                  -Accomodation
+                  <br />
+                  -Plane trip
+                  
+                  
 
                 </Card.Text>
               </Card.Body>
@@ -102,7 +115,7 @@ function About() {
       <Container className="d-flex align-items-center justify-content-center h-100">
           
           <Col>
-            <Card className="flex-fill">
+            <Card className="flex-fill" id="photo3" >
             
               <Card.Body>
                 <Card.Title>Get to know new cultures</Card.Title>

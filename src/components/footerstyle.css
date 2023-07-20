@@ -6,10 +6,18 @@
     align-items: center;
   }
   
-  .footer h4 {
-    font-size: 18px;
-    margin-right: 0;
-  }
+#v{
+  font-size: 18px;
+  font-family: 'Times New Roman', Times, serif;
+  padding-left: 30vh;
+}
+#c{
+  font-size: 18px;
+  font-family: 'Times New Roman', Times, serif;
+  padding-right: 28vh;
+}
+
+  
 
   #row{
     margin-top: 10px;
@@ -22,5 +30,5 @@
   
 .text-right{
     color: aliceblue;
-    margin-left: 0;
+    
 }
