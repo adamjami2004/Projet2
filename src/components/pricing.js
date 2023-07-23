@@ -122,7 +122,7 @@ const Price = () => {
         </Button>
         {isLoading ? null : <p id='pr'>{t('h')} {price} $</p>}
       </div>
-      <Footer />
+      
     </div>
   );
 };
